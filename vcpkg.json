@@ -2,7 +2,7 @@
     "name": "cpp-starter",
     "version": "0.1.0",
     "dependencies": [
-        "gtest",
-        "fmt"
+        "sdl2",
+        "sdl2-image"
     ]
 }

@@ -1,0 +1,3 @@
+add_subdirectory(01_skeleton)
+add_subdirectory(02_artist)
+add_subdirectory(03_grid)
