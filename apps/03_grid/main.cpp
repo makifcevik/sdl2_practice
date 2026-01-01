@@ -44,11 +44,14 @@ int main(int argc, char* argv[]) {
 
       SDL_SetRenderDrawColor(renderer.get(), 0, 0, 0, 255);
 
-      for (int x = 0; x < WIDTH; x += GRID_SIZE) {
-        SDL_RenderDrawLine(renderer.get(), x, 0, x, HEIGHT);
+      int w, h;
+      SDL_GetRendererOutputSize(renderer.get(), &w, &h);
+
+      for (int x = 0; x < w; x += GRID_SIZE) {
+        SDL_RenderDrawLine(renderer.get(), x, 0, x, h);
       }
-      for (int y = 0; y < HEIGHT; y += GRID_SIZE) {
-        SDL_RenderDrawLine(renderer.get(), 0, y, WIDTH, y);
+      for (int y = 0; y < h; y += GRID_SIZE) {
+        SDL_RenderDrawLine(renderer.get(), 0, y, w, y);
       }
 
       SDL_RenderPresent(renderer.get());
