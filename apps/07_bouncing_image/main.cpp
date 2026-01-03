@@ -35,8 +35,8 @@ int main(int argc, char* argv[]) {
       return 1;
     }
 
-    SDL_Rect srcRect{0, 0, 32, 32};
-    SDL_Rect destRect{100, 100, 64, 64};
+    SDL_Rect src_rect{0, 0, 32, 32};
+    SDL_Rect dest_rect{100, 100, 64, 64};
 
     Velocity velocity = {5, 8};
 
@@ -47,9 +47,9 @@ int main(int argc, char* argv[]) {
 
       SDL_RenderClear(renderer.get());
 
-      SDL_RenderCopy(renderer.get(), texture, &srcRect, &destRect);
+      SDL_RenderCopy(renderer.get(), texture, &src_rect, &dest_rect);
 
-      Move(&destRect, &velocity);
+      Move(&dest_rect, &velocity);
 
       SDL_RenderPresent(renderer.get());
 
